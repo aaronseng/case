@@ -1,11 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Case.Scene.Manager
 {
+
+    /// <summary>
+    /// MainManager just handles Main menu button events.
+    /// </summary>
     public class MainManager : MonoBehaviour
     {
         #region Manager Logic
@@ -16,11 +18,11 @@ namespace Case.Scene.Manager
         /// </summary>
         public async void OnStartClicked()
         {
-            await loadLoadingScene();
+            await loadLoadingSceneAsync();
         }
 
         /// <summary>
-        /// Quit the Game.
+        /// Quits the game.
         /// </summary>
         public void OnQuitClicked()
         {
@@ -28,10 +30,9 @@ namespace Case.Scene.Manager
         }
 
         /// <summary>
-        /// Loads the Loading Scene asynchronously.
+        /// Loads the LoadingScene asynchronously.
         /// </summary>
-        /// <returns></returns>
-        private async Task loadLoadingScene()
+        private async Task loadLoadingSceneAsync()
         {
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("LoadingScene");
 

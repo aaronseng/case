@@ -20,7 +20,7 @@ namespace Case.Scene.Manager
 
         private async void Start()
         {
-            await Initialize();
+            await InitializeAsync();
         }
 
         #endregion
@@ -30,8 +30,7 @@ namespace Case.Scene.Manager
         /// <summary>
         /// Pseudo Initialization for Splash screen. This method will fill the progressbar in a second then load the Main scene asynchronously.
         /// </summary>
-        /// <returns></returns>
-        private async Task Initialize()
+        private async Task InitializeAsync()
         {
             float total = 1000f;
             int delay = 10;
