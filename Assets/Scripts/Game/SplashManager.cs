@@ -13,7 +13,7 @@ namespace Case.Splash
     public class SplashManager : MonoBehaviour
     {
         [SerializeField]
-        private Slider _progressBar;
+        private Image _progressBar;
 
         #region Unity Methods
 
@@ -39,7 +39,7 @@ namespace Case.Splash
             for(int i = 0; i <= total; i+= delay)
             {
                 await Task.Delay(System.TimeSpan.FromMilliseconds(delay));
-                _progressBar.value = i;
+                _progressBar.fillAmount = i / total;
             }
 
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("MainScene");
