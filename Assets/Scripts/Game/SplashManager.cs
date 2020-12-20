@@ -3,12 +3,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace Case.Splash
+namespace Case.Scene.Manager
 {
 
-    // We make all device initializations such as input manager, audio middleware and the device specific configurations in splash scene.
-    // Heavy object pool creations and Network connections are also good candidate to be done in splash scene 
-    // for this study case we'll just implement a pseudo initialization which will delay a second then load the Main scene.
+    /// <summary>
+    /// We make all device initializations such as input manager, audio middleware and the device specific configurations in splash scene.
+    /// Heavy object pool creations and Network connections are also good candidate to be done in splash scene 
+    /// for this study case we'll just implement a pseudo initialization which will delay a second then load the Main scene.
+    /// </summary>
 
     public class SplashManager : MonoBehaviour
     {
