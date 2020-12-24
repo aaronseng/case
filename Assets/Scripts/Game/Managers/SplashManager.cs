@@ -34,11 +34,15 @@ namespace Case.Scene.Manager
         {
             float total = 1000f;
             int delay = 10;
-            
+
             // Simulate 1 second delay
-            for(int i = 0; i <= total; i+= delay)
+            for (int i = 0; i <= total; i += delay)
             {
-                await Task.Delay(System.TimeSpan.FromMilliseconds(delay));
+#if UNITY_WEBGL
+                await this.Delay(delay / total);
+#else
+                await Task.Delay(delay);
+#endif
                 _progressBar.fillAmount = i / total;
             }
 
@@ -47,7 +51,11 @@ namespace Case.Scene.Manager
             // Wait until the asynchronous scene fully loads
             while (!asyncLoad.isDone)
             {
-                await Task.Delay(System.TimeSpan.FromMilliseconds(delay));
+#if UNITY_WEBGL
+                await this.Delay(delay / total);
+#else
+                await Task.Delay(delay);
+#endif
             }
         }
 

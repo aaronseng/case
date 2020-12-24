@@ -124,7 +124,7 @@ namespace Case.Game.Character
             _animator.SetBool("Skipping", true);
 
             _movement.StartSpin();
-            
+
             var coords = new List<Vector3>(_insaneCoords.ToArray());
 
             // Take points in a random order for every time when player go insane.
@@ -132,14 +132,19 @@ namespace Case.Game.Character
             {
                 var isCompleted = false;
                 var idx = Random.Range(0, coords.Count);
-                _movement.MoveTo(coords[idx], false).OnCompleted(() => {
+                _movement.MoveTo(coords[idx], false).OnCompleted(() =>
+                {
                     isCompleted = true;
                 });
-                
+
                 // Wait until player reaches the the destination point
                 while (!isCompleted)
                 {
+#if UNITY_WEBGL
+                    await this.Delay(0.01f);
+#else
                     await Task.Delay(10);
+#endif
                 }
 
                 // Remove the point so we don't select the same point again
@@ -153,10 +158,17 @@ namespace Case.Game.Character
             // Leave the screen then reset
             _attack.RangedAttack = new DefaultRangedAttack(1, 100f, 2f, _muzzle);
             _animator.SetBool("Setoff", true);
+#if UNITY_WEBGL
+            await this.Delay(2f);
+#else
             await Task.Delay(2000);
-
+#endif
             _movement.Setoff();
+#if UNITY_WEBGL
+            await this.Delay(3f);
+#else
             await Task.Delay(3000);
+#endif            
             _animator.SetBool("Setoff", false);
             GetReady();
         }
