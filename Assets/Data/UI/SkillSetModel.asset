@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c9334569f90b32428971a7528c17802, type: 3}
+  m_Name: SkillSetModel
+  m_EditorClassIdentifier: 
+  items:
+  - name: Multiple Projectiles
+    enabled: 1
+    sprite: {fileID: 21300000, guid: 700ada227db4704439028e6e0ee25ac1, type: 3}
+    description: Supported skills fire 2 additional projectile
+    signal: {fileID: 11400000, guid: 79e4c5c1213a6a04db2c50d9d454c746, type: 2}
+  - name: Echo
+    enabled: 1
+    sprite: {fileID: 21300000, guid: 110f6bc248ee0f440bf7da43e794e577, type: 3}
+    description: Supported skills repeat an additional time
+    signal: {fileID: 11400000, guid: 3d37d4c0d4377704fa81e703ef8a3ebf, type: 2}
+  - name: Faster Attack
+    enabled: 1
+    sprite: {fileID: 21300000, guid: acc3c5ffb99f76c4ba22cbf4655e0cb5, type: 3}
+    description: Supported skills have 50% increased attack speed
+    signal: {fileID: 11400000, guid: 0ffb014d1128474429c6c319ef03747c, type: 2}
+  - name: Faster Projectile
+    enabled: 1
+    sprite: {fileID: 21300000, guid: 8bfbc494af43c8f46bafbe0649712662, type: 3}
+    description: Supported skills have 50% increased projectile speed
+    signal: {fileID: 11400000, guid: aef2c060e2bb0e9488438205f3cdd881, type: 2}
+  - name: Clone
+    enabled: 1
+    sprite: {fileID: 21300000, guid: 87c1bb9e673240b48a35662036b88785, type: 3}
+    description: Creates a shadow clone at a random position
+    signal: {fileID: 11400000, guid: ae7b4f001b0630b48acc7c6441a8ca95, type: 2}
+  - name: Insane
+    enabled: 1
+    sprite: {fileID: 21300000, guid: 5aa5e893b0e6df6479115fd24da8faca, type: 3}
+    description: Think twice before you smash that
+    signal: {fileID: 11400000, guid: 73fce7f237c3e564aafce85518f482bc, type: 2}
