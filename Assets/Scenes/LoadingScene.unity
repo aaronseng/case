@@ -609,4 +609,4 @@ MonoBehaviour:
   - key: CHARACTER
     gameObject: {fileID: 1051887814488240246, guid: 3ddf2d806b130144ebf7cf452190100d,
       type: 3}
-    count: 4
+    count: 2

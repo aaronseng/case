@@ -4737,8 +4737,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1051887814488240254}
   - component: {fileID: 1051887814488240240}
+  - component: {fileID: 524199810}
+  - component: {fileID: 524199811}
+  - component: {fileID: 524199812}
+  - component: {fileID: 3418477719263913229}
   m_Layer: 9
-  m_Name: Pizza Boy
+  m_Name: PRF_PizzaBoy
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4751,15 +4755,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1051887814488240246}
-  m_LocalRotation: {x: 0, y: 0.99918914, z: 0, w: 0.04026257}
-  m_LocalPosition: {x: 0.33285278, y: 0, z: 0.54824185}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1051887814869892553}
   - {fileID: 1051887814307726672}
+  - {fileID: 7685138023955294369}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 175.38501, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &1051887814488240240
 Animator:
   serializedVersion: 3
@@ -4779,6 +4784,63 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &524199810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051887814488240246}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e57682d7b2ff9b44a903a219a48faa61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &524199811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051887814488240246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9234fd4e9fd0684783400206b647d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 15
+  _turnSpeed: 20
+--- !u!114 &524199812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051887814488240246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bf88fe767432b54caf3771b297bad07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnPoint: {fileID: 0}
+  _targetPoint: {fileID: 0}
+  _movement: {fileID: 524199811}
+  _attack: {fileID: 524199810}
+  _animator: {fileID: 1051887814488240240}
+  _muzzle: {fileID: 7685138023955294369}
+--- !u!114 &3418477719263913229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051887814488240246}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db4279dc8130914dbd90531b2cbc1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attack: {fileID: 524199810}
 --- !u!1 &1051887814508258307
 GameObject:
   m_ObjectHideFlags: 0
@@ -6181,3 +6243,33 @@ Transform:
   m_Father: {fileID: 1051887813450496852}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1.2721701, y: -0.3634109, z: 38.387592}
+--- !u!1 &2489361822664348524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7685138023955294369}
+  m_Layer: 9
+  m_Name: Muzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7685138023955294369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2489361822664348524}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.28, z: 1.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1051887814488240254}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
