@@ -11,8 +11,7 @@ namespace Case.Utility
         static T _instance = null;
 
         /// <summary>
-        /// Returns the singleton instance if it's already created.
-        /// If we can't find an already created Singleton instance returns 'null'.
+        /// Returns the singleton instance of the component
         /// </summary>
         public static T Instance
         {

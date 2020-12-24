@@ -10,7 +10,7 @@ namespace Case.Scene.Manager
     /// <summary>
     /// We make all light-weight object pool creations, loading terrains, multiplayer network connections in LoadingScene.
     /// Also game user interface preparations are good candidate to be done in LoadingScene as well.
-    /// For this study case I'll just implement light-weight Object Pool initialization in LoadingScene.
+    /// For this study case I'll just implement light-weight object pool initialization in LoadingScene.
     /// </summary>
     public class LoadingManager : MonoBehaviour
     {
@@ -41,7 +41,6 @@ namespace Case.Scene.Manager
         /// <summary>
         /// Loads the GameScene asynchronously.
         /// </summary>
-        /// <returns></returns>
         private async Task loadGameSceneAsync()
         {
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("GameScene");

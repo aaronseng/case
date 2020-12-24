@@ -9,7 +9,7 @@ namespace Case.Scene.Manager
     /// <summary>
     /// We make all device initializations such as input manager, audio middleware and the device specific configurations in splash scene.
     /// Heavy object pool creations and Network connections are also good candidate to be done in splash scene 
-    /// for this study case I'll just implement a pseudo initialization which will delay a second then load the Main scene.
+    /// for this study case I'll just implement a pseudo initialization which will delay a second then load the main scene.
     /// </summary>
     public class SplashManager : MonoBehaviour
     {
