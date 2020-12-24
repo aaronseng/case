@@ -48,7 +48,7 @@ namespace Case.Scene.Manager
             // Wait until the asynchronous scene fully loads
             while (!asyncLoad.isDone)
             {
-                await Task.Delay(System.TimeSpan.FromMilliseconds(10));
+                await Task.Delay(10);
             }
         }
 

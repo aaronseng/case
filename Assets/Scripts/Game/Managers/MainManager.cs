@@ -39,7 +39,7 @@ namespace Case.Scene.Manager
             // Check every 10ms if Loading scene is loaded.
             while (!asyncLoad.isDone)
             {
-                await Task.Delay(System.TimeSpan.FromMilliseconds(10));
+                await Task.Delay(10);
             }
         }
 
